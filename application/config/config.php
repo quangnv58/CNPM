@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/studentneed/';
+$config['base_url']	= 'http://localhost/CNPM/';
 
 /*
 |--------------------------------------------------------------------------
