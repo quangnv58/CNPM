@@ -1,0 +1,15 @@
+/* CSS Document */
+#customers{
+	border-collapse:collapse;
+}
+#customers tr{
+	border:1px solid #030;
+	
+}
+#customers td{
+	padding-left:10px;
+}
+#customers tr.doimaunen{
+	background-color:
+}
+
