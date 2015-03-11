@@ -34,6 +34,7 @@
             	<?php if($this->session->userdata("facebook")==NULL):?>
             	<li>
 				<a href="auth/login"><span class="glyphicon glyphicon-user"></span>  Login</a>
+				<a href="login/themtaikhoan"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
                 </li>
             <?php else:?>
             <li>
