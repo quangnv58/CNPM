@@ -2,7 +2,7 @@
 
 class login extends CI_Controller{
 		function index(){
-			echo "Dang ly thanh cong";
+			echo "Dang ky thanh cong";
 		}
 	
 		

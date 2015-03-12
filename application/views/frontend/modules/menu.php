@@ -12,7 +12,7 @@
          <div>
          	<div class="collapse navbar-collapse" id="myNavbar">
          	<ul class="nav navbar-nav">
-            	<li class="active"><a href="">Home</a></li>
+            	<li><a href="">Home</a></li>
           		 <?php
 				
           				foreach($menu as $m){
@@ -33,13 +33,15 @@
             <ul class="nav navbar-nav navbar-right">
             	<?php if($this->session->userdata("facebook")==NULL):?>
             	<li>
-				<a href="auth/login"><span class="glyphicon glyphicon-user"></span>  Login</a>
-				<a href="login/themtaikhoan"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
-                </li>
+					       <a href="auth/login"><span class="glyphicon glyphicon-log-in"></span>  Login</a>
+				      </li>
+				      <li>
+					       <a href="login/themtaikhoan"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
+              </li>
             <?php else:?>
-            <li>
+            
 				<?php $this->load->view("auth");?>
-            </li>
+            
 			<?php endif;?>
             </ul>
             </div>
