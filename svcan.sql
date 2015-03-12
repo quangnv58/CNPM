@@ -114,7 +114,7 @@ INSERT INTO `svc_post` (`idpost`, `recruitment`, `title`, `number`, `position`, 
 CREATE TABLE IF NOT EXISTS `svc_user` (
   `opentid` int(255) NOT NULL AUTO_INCREMENT COMMENT 'id tai khoan',
   `name` varchar(30) NOT NULL COMMENT 'ho ten',
-  `username` varchar(30) NOT NULL COMMENT 'ten dang nhap',
+  `user` varchar(30) NOT NULL COMMENT 'ten dang nhap',
   `email` varchar(50) NOT NULL COMMENT 'mail',
   `password` varchar(50) NOT NULL COMMENT 'mat khau',
   `birthday` date NOT NULL,
