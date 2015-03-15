@@ -80,7 +80,7 @@
 		);		
 		$this->mlogin->insert($tk);
 		echo'<script>alert("Đăng kí thành công");</script>';
-		header('Location: http://localhost/CNPM');			
+		redirect('');			
 	}
   ?>
 </div>

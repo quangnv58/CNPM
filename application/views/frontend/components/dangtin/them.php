@@ -9,7 +9,7 @@
 <div class="container">
 <div class="jumbotron">
 <?php
-	if($this->session->userdata("facebook")!=NULL):?>
+	if($this->session->userdata('logged_in')!=NULL):?>
 <form action="<?php echo base_url(); ?>dangtin/save" method="post" enctype="multipart/form-data">
 <div >
 	<table width="758" border="0">
@@ -67,7 +67,8 @@
 </div>
 </form>
 <?php else:?>
-<?php $this->load->view("auth");?>
+<h1> Vui lòng đang nhập trước khi đăng bài</h1>
+<?php $this->load->view("frontend/components/dangnhap/login_view");?>
 <?php endif;?>
 </div>
 </div>
