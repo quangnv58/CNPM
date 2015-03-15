@@ -4,6 +4,22 @@
  {
    parent::__construct();
    $this->load->model('frontend/user','',TRUE);
+		$this->load->model("frontend/mmenu");
+		$this->load->model("frontend/mpost");
+		$this->data['menu']=$this->mmenu->menu_by(1,0);
+		$this->data['pages']='dangnhap';
+		$this->load->library("session");
+		$this->load->library("facebook",array(
+			"appId"=>"1567383593519565",
+			"secret"=>"8e12a6ee40251675e9e965448edf76f1"
+		));
+		$this->uid= $this->facebook->getUser();
+    	$this->access_token=$this->facebook->getAccessToken();
+		$this->facebook->setAccessToken($this->access_token);
+		$this->load->model('frontend/user','',TRUE);
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('user', 'Username', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
  }
  
  function index()
@@ -17,12 +33,14 @@
    if($this->form_validation->run() == FALSE)
    {
      //Field validation failed.  User redirected to login page
-     $this->load->view('frontend/components/dangnhap/login_view');
+     	$this->data['cat']='login_view';
+		$this->load->view('frontend/home',$this->data);
+		redirect('');
    }
    else
    {
      //Go to private area
-     redirect('trangchu', 'refresh');
+     redirect('trangchu');
    }
  
  }
