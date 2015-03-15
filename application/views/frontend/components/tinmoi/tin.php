@@ -12,25 +12,45 @@
 		<tr>
     		<th>Tiêu đề</th>
     		<th>Ngày đăng</th>
-    		<th colspan="2">Quản lý</th>
+    		<?php
+			if($this->session->userdata('logged_in')!=NULL){
+    			echo'
+    			<th colspan="2">Quản lý</th>
+    			';
+    		}
+    		?>
+    		
 		</tr>
 <?php
+
 	foreach($post as $val){
 		
 ?>
 	<tr>
-		<td><a href="<?php echo "http://localhost/CNPM/hientin/show/".$val['idpost'] ?>">
+		<td><a href="<?php echo "http://localhost/studentneed/hientin/show/".$val['idpost'] ?>">
 				<h1><?php echo $val["title"]?></h1>
 			</a></td>
 		<td><?php echo $val['postdate']?></td>
-		<td width="44">
-			<div align="center">
-			  <a href="<?php echo "http://localhost/CNPM/suatin/edit/".$val['idpost'] ?>">
-   			  <img src="public/frontend/images/b_edit.png" data-toggle="tooltip" data-placement="left" title="edit"/>
-       			</a> 
-        	</div>
-		</td>	
-        <td width="41"><a href="<?php echo "http://localhost/CNPM/suatin/delete/".$val['idpost'] ?>"><img src="public/frontend/images/b_drop.png" data-toggle="tooltip" data-placement="left" title="delete" /></a></td>
+		<?php
+		$this->session->userdata('logged_in');
+		$session_data = $this->session->userdata('logged_in');
+		$user= $session_data['user'];
+		if($this->session->userdata('logged_in')!=NULL && $user==$val['belong']):?>
+					<td width="44">
+						<div align="center">
+						  <a href="<?php echo "http://localhost/studentneed/suatin/edit/".$val["idpost"] ?>">						  
+						  	<img src="public/frontend/images/b_edit.png" data-toggle="tooltip" data-placement="left" title="edit"/> 			  
+	       				  </a> 
+	        			</div>
+					</td>	
+       				<td width="41">
+	       				<a href="<?php echo "http://localhost/studentneed/suatin/delete/".$val["idpost"] ?>">
+	       					<img src="public/frontend/images/b_drop.png" data-toggle="tooltip" data-placement="left" title="delete" />
+	       				</a>
+       				</td>
+		<?php endif; ?>
+			  
+		
 	</tr>
 <?php
 	}
