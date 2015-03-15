@@ -1,3 +1,8 @@
+<?php 
+	$this->session->userdata('logged_in');
+	$session_data = $this->session->userdata('logged_in');
+	$user= $session_data['user'];
+?>
 <script src="<?php echo $base_url;?>js/jquery.min.js" type="text/javascript"></script>
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
@@ -31,24 +36,25 @@
         		</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-			<?php
-					if(($this->session->userdata("facebook")==NULL)&&($this->session->userdata("logged_in")==NULL)):?>
-            	<li>
-					       <a href="dangtin"><span class="glyphicon glyphicon-log-in"></span>Login</a>
-						   
-				      </li>
+            	
+				<?php if($this->session->userdata("facebook")==NULL && $user==NULL ):?>
+            			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"> Login<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="loginacc"> Login for recruitment</a></li>
+                        <li><a href="auth/login"><img src="images/facebook.png" /></a></li>
+                      </ul>
+        		</li>
 				      <li>
-					       <a href="login/themtaikhoan"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
+					       <a href="login"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
               </li>
-			<?php else:?>
-			<?php
-					if(($this->session->userdata("facebook")!=NULL)):?>
-              
-           				<?php $this->load->view("auth");?>
-           <?php else:?>
-						<a href="home/logout">Logout</a>			 
+            <?php else:?>
+    			 <?php if($this->session->userdata("facebook")!=NULL):?>
+				<?php $this->load->view("auth");?>
+                <?php else:?>
+                 <li>Welcome <?php echo $user; ?>!</li>
+   				<a href="http://localhost/CNPM/trangchu/logout">Logout</a>
 			<?php endif;?>
-    		<?php endif;?>
+            <?php endif;?>
             </ul>
             </div>
           </div>
