@@ -15,9 +15,9 @@
             <h1>Login</h1>
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="control-label col-sm-2" for="username">Username:</label>
+                    <label class="control-label col-sm-2" for="user">Username:</label>
                     <div class="col-sm-10">
-                          <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                          <input type="text" class="form-control" id="user" name="user" placeholder="Enter username">
                     </div>
                 </div>
                 </br></br>
