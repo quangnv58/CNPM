@@ -25,7 +25,10 @@ class Dangtin extends CI_Controller {
 		$this->load->database();
 		$this->load->view('frontend/home',$this->data);
 	}
-	function save(){                          
+	function save(){ 
+		$this->session->userdata('logged_in');
+		$session_data = $this->session->userdata('logged_in');
+		$user= $session_data['user'];                         
 		$data = array( 
 		'recruitment'=>$_POST['recruitment'], 
 		'title' => $_POST['title'], 
@@ -34,7 +37,8 @@ class Dangtin extends CI_Controller {
 		'postdate' => $_POST['postdate'], 
 		'outdate' => $_POST['outdate'],
 		'describer' => $_POST['describer'],
-		'status' => $_POST['status']
+		'status' => $_POST['status'],
+		'belong'=>$user
 		); 
 		$this->mpost->insert($data); 
 		redirect(""); 

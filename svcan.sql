@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2015 at 03:23 PM
+-- Generation Time: Mar 15, 2015 at 02:56 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -94,16 +94,17 @@ CREATE TABLE IF NOT EXISTS `svc_post` (
   `describer` longtext NOT NULL,
   `img` varchar(100) NOT NULL,
   `status` int(2) NOT NULL,
+  `belong` varchar(200) NOT NULL,
   PRIMARY KEY (`idpost`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
 
 --
 -- Dumping data for table `svc_post`
 --
 
-INSERT INTO `svc_post` (`idpost`, `recruitment`, `title`, `number`, `position`, `postdate`, `outdate`, `describer`, `img`, `status`) VALUES
-(36, 'a', '', 0, '', '0000-00-00', '0000-00-00', '', '', 0),
-(42, 'Đ M trọng', 'Đ m tiến chó', 10, 'Trọng nhổn', '2015-02-03', '2015-02-10', '   Đ m   trọng ', '', 1);
+INSERT INTO `svc_post` (`idpost`, `recruitment`, `title`, `number`, `position`, `postdate`, `outdate`, `describer`, `img`, `status`, `belong`) VALUES
+(43, 'hihi', 'hihi', 23, '23', '0000-00-00', '0000-00-00', '23', '', 1, 'admin'),
+(1, '2', '1', 1, '1', '0000-00-00', '0000-00-00', '1', '', 1, 'quang');
 
 -- --------------------------------------------------------
 
@@ -120,7 +121,14 @@ CREATE TABLE IF NOT EXISTS `svc_user` (
   `birthday` date NOT NULL,
   `gender` int(11) NOT NULL COMMENT 'gioi tinh',
   PRIMARY KEY (`opentid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `svc_user`
+--
+
+INSERT INTO `svc_user` (`opentid`, `name`, `user`, `email`, `password`, `birthday`, `gender`) VALUES
+(1, 'quang', 'admin', 'quang@gmail.com', '123456', '0000-00-00', 23);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
