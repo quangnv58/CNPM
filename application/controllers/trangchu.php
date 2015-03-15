@@ -19,24 +19,35 @@ class Trangchu extends CI_Controller {
 		$this->uid= $this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
-		$session_data = $this->session->userdata('logged_in');
-		$this->data['user'] = $session_data['user'];
  
-	}
+ }
 	public function index()
 	{
-		if($this->session->userdata('logged_in'))
-		{
-			$session_data = $this->session->userdata('logged_in');
-			$this->data['user'] = $session_data['user'];
-			$this->load->view('frontend/home', $this->data);
-		}
 		$this->load->view('frontend/home',$this->data);	
 	}
-	function logout()
-	{
-		$this->session->unset_userdata('logged_in');
-		session_destroy();
-		redirect('http://localhost/CNPM', 'refresh');
+	public function login(){
+		if($this->uid){
+			try{
+				$me=$this->facebook->api("/me");
+				$this->session->set_userdata("facebook",$me['id']);
+				$this->load->view("frontend/home");
+			}
+			catch(FacebookApiException $e){
+				$this->uid=NULL;
+			}
+		}
+		else{
+			die("<script>top.location='".$this->facebook->getLoginUrl(array(
+				"scope"=>"email",
+				"redirect_url"=>site_url("")
+			))."'</script>");	
+		}
+		redirect("");	
 	}
+	public function logout(){
+		//session_destroy();
+		$this->session->sess_destroy();
+		redirect("");
+	}
+	
 }

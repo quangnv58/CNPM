@@ -1,4 +1,4 @@
-<?php echo form_open(); ?>
+<?php echo form_open("login/xulythem"); ?>
  	<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +11,24 @@
 </head>
 <body>
 
-
 <div class="container">
   <h2>Hãy điền thông tin của bạn</h2>
-  <form role="form" method="POST">
+  <form role="form">
     <div class="form-group">
       <label for="ten">Tên người dùng:</label>
-      <input type="text" class="form-control" id="ten" name="name" required/>
+      <input type="text" class="form-control" id="ten" name="name" />
     </div>
     <div class="form-group">
       <label for="tentk">Tên tài khoản:</label>
-      <input type="text" class="form-control" id="tentk" name="user" required/>
+      <input type="text" class="form-control" id="tentk" name="user" />
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password" required/>
+      <input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password">
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required/>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="ns">Birthday:</label>
@@ -41,48 +40,10 @@
     </div>
     <button type="submit" class="btn btn-default">Save</button>
   </form>
-  <?php
-	$test = true;
-	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $user  = $_POST['user'];
-    $email = $_POST['email'];
-    $conn=new mysqli("localhost","root","","svcan");
-      if($conn->connect_error){
-        die("Connection failed: ". $conn->connect_error);
-      }
-    $sql="SELECT user, email FROM svc_user";
-    $result=$conn->query($sql);//?
-	
-	  if($result->num_rows> 0){
-			  while($row=$result->fetch_assoc()){
-				if( $user===$row["user"]){
-				  echo'<script>alert("User Name da co nguoi su dung");</script>';
-				  $test = false;
-				  break;		  
-				}
-				if( $email == $row["email"] ){
-				  echo'<script>alert("Email da co nguoi su dung");</script>';
-				  $test = false;
-				  break;
-				}
-			}
-	    }
-	}
-	if($test) {
-		$tk = array (
-				'name' => $this->input->post('name'),
-				'user' => $this->input->post('user'),
-				'password' => $this->input->post('password'),
-				'email' => $this->input->post('email'),
-				'birthday' => $this->input->post('birthday'),
-				'gender' => $this->input->post('gender')
-				);		
-				$this->mlogin->insert($tk);
-				//redirect("login/index");
-	}
-  ?>
 </div>
 
 </body>
 </html>
+
+
 <?php echo form_close(); ?>

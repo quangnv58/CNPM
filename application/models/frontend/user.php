@@ -1,9 +1,9 @@
 <?php
 Class User extends CI_Model{
-	function login($user, $password){
-		$this -> db -> select('opentid, user, password');
+	function login($username, $password){
+		$this -> db -> select('id, username, password');
 		$this -> db -> from('user');
-		$this -> db -> where('user', $user);
+		$this -> db -> where('username', $username);
 		$this -> db -> where('password', $password);
 		$this -> db -> limit(1);
 

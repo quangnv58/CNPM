@@ -4,22 +4,22 @@
 	</div>
 </div>
 <div class="boxtin">
-<div class="col-md-3"> 
-        <a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>">
-        <img src="public/frontend/images/tinvan1.jpg" class="img-thumbnail" alt="moinhat1" width="100%"/>
-        </a>
+	<div class="col-md-3"> 
+	<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>">
+	<img src="public/frontend/images/tinvan1.jpg" class="img-thumbnail" alt="moinhat1" width="100%"/>
+	</a>
 		<div style="text-align:center">
-		<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>"><?php echo $post[0]["title"];?></a>
+			<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>"><?php echo $post[0]["title"];?></a>
 		</div>
 	</div>
 	<div class="col-md-3"> 
-        <a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>">
-        <img src="public/frontend/images/tinvan2.jpg" class="img-thumbnail" alt="moinhat1" width="100%"/>
-        </a>
-	<div style="text-align:center">
-		<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[1]['idpost'] ?>"><?php echo $post[1]["title"];?></a>
-	</div>                    
-</div>
+	<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>">
+	<img src="public/frontend/images/tinvan2.jpg" class="img-thumbnail" alt="moinhat1" width="100%"/>
+	</a>
+		<div style="text-align:center">
+			<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[1]['idpost'] ?>"><?php echo $post[1]["title"];?></a>
+		</div>                    
+	</div>
 	<div class="col-md-3"> 
 	<a href="<?php echo "http://localhost/studentneed/hientin/show/".$post[0]['idpost'] ?>">
 	<img src="public/frontend/images/tinvan3.jpg" class="img-thumbnail" alt="moinhat1" width="100%"/>
