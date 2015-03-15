@@ -25,12 +25,6 @@ class Trangchu extends CI_Controller {
 	}
 	public function index()
 	{
-		if($this->session->userdata('logged_in'))
-		{
-			$session_data = $this->session->userdata('logged_in');
-			$this->data['user'] = $session_data['user'];
-			$this->load->view('frontend/home', $this->data);
-		}
 		$this->load->view('frontend/home',$this->data);	
 	}
 	function logout()
