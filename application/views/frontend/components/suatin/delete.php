@@ -49,7 +49,7 @@
 				</p>
 			</td>
     		<td>
-            	<a href="http://localhost/studentneed/tinmoi"> 
+            	<a href="http://localhost/CNPM/tinmoi"> 
 
 					<p>&nbsp;</p>        
 				</a>

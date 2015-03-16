@@ -38,6 +38,10 @@
         <p>
         <?php echo isset($post['outdate'])?$post['outdate']:'';?>
         </p>
+        </br>
+        <a href="#">
+        <p> <img src="images/nopdon.png" /> Nộp hồ sơ</p>
+        </a>
 	</div>
     <div class="xoa" style="clear:both"></div>
 </div>

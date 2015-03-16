@@ -48,7 +48,7 @@
 		<tr>
 		  <td height="61"><p>Trạng thái </p>
 	      <p>(1-Hiển thị. 0-Ẩn)</p></td>
-		  <td colspan="3"><input type="number" name="status" /></td>
+		  <td colspan="3"><input type="number" name="status" value="1"/></td>
 	    </tr>
 		<tr>
 			<td height="40">Số lượng</td>

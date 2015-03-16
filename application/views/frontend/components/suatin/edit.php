@@ -52,7 +52,7 @@
 					<input class="btn btn-primary" type="submit" name="edit" value=" Edit">
 				</p></td>
     		<td>
-            	<a href="http://localhost/studentneed/tinmoi"> 
+            	<a href="http://localhost/CNPM/tinmoi"> 
 
 					<p>
 						<input class="btn btn-primary" name="Button" type="button"    value="Danh sách tin đã đăng">

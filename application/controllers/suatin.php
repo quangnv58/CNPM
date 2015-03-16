@@ -21,7 +21,7 @@ class Suatin extends CI_Controller {
 		$id=(int)$id;
 		$data['post']=$this->db->select('*')->from('post')->where(array('idpost' => $id))->get()->row_array();
 		if(!isset($data['post']) || count($data['post'])==0){
-			header('Location: http://localhost/studentneed/tinmoi');
+			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
 		if($this->input->post('edit')){
@@ -42,7 +42,7 @@ class Suatin extends CI_Controller {
 				'describer' => $describer
 			); 
 			$this->db->where('idpost',$id)->update('post',$data);
-			header('Location: http://localhost/studentneed/tinmoi');
+			header('Location: http://localhost/CNPM/tinmoi');
 		}	
 		$this->data['post']=$data['post'];
 		$this->data['cat']='edit';
@@ -52,12 +52,12 @@ class Suatin extends CI_Controller {
 		$id=(int)$id;
 		$data['post']=$this->db->select('*')->from('post')->where(array('idpost' => $id))->get()->row_array();
 		if(!isset($data['post']) || count($data['post'])==0){
-			header('Location: http://localhost/studentneed/tinmoi');
+			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
 		if($this->input->post('delete')){ 
 			$this->db->delete('post',array('idpost'=> $id));
-			header('Location: http://localhost/studentneed/tinmoi');
+			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
 		$this->data['post']=$data['post'];

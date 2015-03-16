@@ -30,7 +30,7 @@ class Hientin extends CI_Controller {
 		$id=(int)$id;
 		$data['post']=$this->db->select('*')->from('post')->where(array('idpost' => $id))->get()->row_array();
 		if(!isset($data['post']) || count($data['post'])==0){
-			header('Location: http://localhost/studentneed/tinmoi');
+			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
 		$this->data['post']=$data['post'];
