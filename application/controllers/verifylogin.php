@@ -35,7 +35,6 @@
      //Field validation failed.  User redirected to login page
      	$this->data['cat']='login_view';
 		$this->load->view('frontend/home',$this->data);
-		redirect('');
    }
    else
    {
