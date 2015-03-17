@@ -28,16 +28,21 @@ class Dangtin extends CI_Controller {
 	function save(){ 
 		$this->session->userdata('logged_in');
 		$session_data = $this->session->userdata('logged_in');
-		$user= $session_data['user'];                         
+		$user= $session_data['user'];
+		$query = $this->db->get_where('user', array('user' => $user));
+		foreach ($query->result() as $row)
+		{
+			$name = $row->name;
+		}                         
 		$data = array( 
-		'recruitment'=>$_POST['recruitment'], 
+		'recruitment'=>$name, 
 		'title' => $_POST['title'], 
 		'number' => $_POST['number'], 
 		'position' => $_POST['position'], 
 		'postdate' => $_POST['postdate'], 
 		'outdate' => $_POST['outdate'],
 		'describer' => $_POST['describer'],
-		'status' => $_POST['status'],
+		'status' => '1',
 		'belong'=>$user
 		); 
 		$this->mpost->insert($data); 

@@ -10,14 +10,13 @@
 <div class="container" >
 <div class="jumbotron">
 	<div class="right" style="float:right">
-		<img src="public/frontend/img_tin/random.php"  width="500px">
+		<img src="public/frontend/img_tin/random.php"  width="400px">
 	</div>
     <div class="left" style="float:left" style="text-align:left">
         <p class="text">
         <?php echo isset($post['title'])?$post['title']:'';?>
         </p>
         <img src=" <?php echo isset($post['img'])?$post['img']:'';?>"/>
-		</p>
         <p class="text">Công ty: </p>
         <p>        	
         <?php echo isset($post['recruitment'])?$post['recruitment']:'';?>
@@ -30,7 +29,10 @@
         <p>
         <?php echo isset($post['number'])?$post['number']:'';?>
         </p>
-        <p class="text">Mô tả công việc: </p>
+       </br>
+	</div>
+    <div class="xoa" style="clear:both"></div>
+	    <p class="text">Mô tả công việc: </p>
         <p>
         <?php echo isset($post['describer'])?$post['describer']:'';?>
         </p>
@@ -38,12 +40,10 @@
         <p>
         <?php echo isset($post['outdate'])?$post['outdate']:'';?>
         </p>
-        </br>
-        <a href="#">
+		<a href="#"></a>
         <p> <img src="images/nopdon.png" /> Nộp hồ sơ</p>
-        </a>
-	</div>
-    <div class="xoa" style="clear:both"></div>
+   
+   
 </div>
 </div>
 </form>

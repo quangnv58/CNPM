@@ -26,11 +26,6 @@
 			<td colspan="3"><input type="text" name="position" id="position"value="<?php echo isset($post['position'])?$post['position']:'';?>" /></td>
 		</tr>
 		<tr>
-			<td height="56">Ảnh minh họa</td>
-			<td colspan="3"><img src ="#"width="100"/>
-			</td>
-		</tr>
-		<tr>
 			<td height="56">Ngày đăng</td>
 			<td width="167"><input type="text" name="postdate" id="postdate" value="<?php echo isset($post['postdate'])?$post['postdate']:'';?>"/></td>
 			<td width="157">Ngày hết hạn</td>

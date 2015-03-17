@@ -12,7 +12,6 @@
      <div class="container">
      <?php echo validation_errors(); ?>
    <?php echo form_open('verifylogin'); ?>
-            <h1>Login</h1>
             <form class="form-horizontal" role="form">
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="user">Username:</label>
@@ -30,7 +29,8 @@
                 <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
+        <label><input type="checkbox"> Lưu mật khẩu</label>
+		<a href="login"><p>Chưa có tài khoản?</p></a>
       </div>
     </div>
   </div>

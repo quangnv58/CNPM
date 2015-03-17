@@ -16,7 +16,7 @@
   <h2>Hãy điền thông tin của bạn</h2>
   <form role="form" method="POST">
     <div class="form-group">
-      <label for="ten">Tên người dùng:</label>
+      <label for="ten">Tên doanh nghiệp</label>
       <input type="text" class="form-control" id="ten" name="name" required/>
     </div>
     <div class="form-group">
@@ -32,12 +32,8 @@
       <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required/>
     </div>
     <div class="form-group">
-      <label for="ns">Birthday:</label>
-      <input type="date" class="form-control" id="ns" name="birthday" />
-    </div>
-    <div class="form-group">
-      <label for="gt">Gender:</label>
-      <input type="text" class="form-control" id="gt" name="gender" />
+      <label for="gt">Lĩnh vực</label>
+      <input type="text" class="form-control" id="gt" name="field" />
     </div>
     <button type="submit" class="btn btn-default">Save</button>
   </form>
@@ -75,8 +71,7 @@
 				'user' => $this->input->post('user'),
 				'password' => $this->input->post('password'),
 				'email' => $this->input->post('email'),
-				'birthday' => $this->input->post('birthday'),
-				'gender' => $this->input->post('gender')
+				'field' => $this->input->post('field')
 		);		
 		$this->mlogin->insert($tk);
 		echo'<script>alert("Đăng kí thành công");</script>';

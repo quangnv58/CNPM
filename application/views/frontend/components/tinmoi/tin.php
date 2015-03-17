@@ -8,7 +8,7 @@
 <div >
 <div class="jumbotron">
 	<table class="table" id="customers">
-		<caption><h1>Các tin đã đăng</h1></caption>
+		<caption><h2>Các tin đã đăng</h2></caption>
 		<tr>
     		<th>Tiêu đề</th>
     		<th>Ngày đăng</th>
@@ -28,7 +28,7 @@
 ?>
 	<tr>
 		<td><a href="<?php echo "http://localhost/CNPM/hientin/show/".$val['idpost'] ?>">
-				<h1><?php echo $val["title"]?></h1>
+				<h2><?php echo $val["title"]?></h2>
 			</a></td>
 		<td><?php echo $val['postdate']?></td>
 		<?php
