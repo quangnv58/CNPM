@@ -33,28 +33,28 @@
                         <li><a href="#">Mr.Tiến</a></li>
                         <li><a href="#">Mr.Quang</a></li>
                       </ul>
-        		</li>
+        		    </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             	
-				<?php if($this->session->userdata("facebook")==NULL && $user==NULL ):?>
+				        <?php if($this->session->userdata("facebook")==NULL && $user==NULL ):?>
             			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"> Login<span class="caret"></span></a>
                       <ul class="dropdown-menu">
                         <li><a href="loginacc"> Login for recruitment</a></li>
                         <li><a href="auth/login"><img src="images/facebook.png" /></a></li>
                       </ul>
-        		</li>
-				      <li>
-					       <a href="login"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
-              </li>
-            <?php else:?>
-    			 <?php if($this->session->userdata("facebook")!=NULL):?>
-				<?php $this->load->view("auth");?>
+        		      </li>
+    				      <li>
+    					       <a href="login"><span class="glyphicon glyphicon-user"></span>  SignUp</a>
+                  </li>
                 <?php else:?>
-                 <li>Welcome <?php echo $user; ?>!</li>
-   				<a href="http://localhost/CNPM/trangchu/logout">Logout</a>
-			<?php endif;?>
-            <?php endif;?>
+              			 <?php if($this->session->userdata("facebook")!=NULL):?>
+          				        <?php $this->load->view("auth");?>
+                          <?php else:?>
+                              <li><a><span class="glyphicon glyphicon-user"></span>  Welcome <?php echo $user; ?>!</a></li>
+   				                    <li><a href="http://localhost/CNPM/trangchu/logout"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
+			                    <?php endif;?>
+                      <?php endif;?>
             </ul>
             </div>
           </div>
