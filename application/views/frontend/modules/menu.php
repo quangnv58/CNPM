@@ -4,6 +4,7 @@
 	$user= $session_data['user'];
 ?>
 <script src="<?php echo $base_url;?>js/jquery.min.js" type="text/javascript"></script>
+<h1 class="banner">Studentneed</h1>
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
     	<div class="navbar-header">

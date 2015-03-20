@@ -1,8 +1,16 @@
 body{
 	background-image: url("body.jpg");
 }
+.banner{
+	margin-top: 50px;
+	text-align: center;
+	color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    margin-bottom: 10px;
+}
 nav{
-	margin: 100px 100px 100px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 .slide{
 	
@@ -15,6 +23,7 @@ nav{
 	margin-right: 100px;
 	text-align: center;
 	font:small Georgia Serif;
+	color: white;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
@@ -27,6 +36,7 @@ nav{
 	background-color: lightgrey;
 }
 .bq{
+	color:white;
 	background-color: grey;
 	text-align: center;
 	padding-top: 5px;
