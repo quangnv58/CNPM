@@ -10,7 +10,7 @@
         <div class="col-md-6">
             <h4>Follow us</h4>
             <a href="https://www.facebook.com/nguyen.quang.9028194"><img  src="public/frontend/css/fb.png" alt="fb" width="40" height="40"/></a>
-            <a href="https://www.facebook.com/nguyen.quang.9028194"><img  src="public/frontend/css/yt.png" alt="yt" width="40" height="40"/></a>
+            <a href="https://www.youtube.com/watch?v=q9ZnsVj4dDg&feature=youtu.be"><img  src="public/frontend/css/yt.png" alt="yt" width="40" height="40"/></a>
         </div>
     </div>
     

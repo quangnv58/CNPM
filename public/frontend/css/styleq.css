@@ -1,0 +1,34 @@
+body{
+	background-image: url("body.jpg");
+}
+nav{
+	margin: 100px 100px 100px;
+}
+.slide{
+	
+	margin-left:100px;
+	margin-right: 100px;
+}
+.thanhtinmoi{
+	background-image: url("thanhtinmoi.jpg");
+	margin-left:100px;
+	margin-right: 100px;
+	text-align: center;
+	font:small Georgia Serif;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.boxtin{
+	margin-left:100px;
+	margin-right: 100px;
+
+}
+.footer1{
+	background-color: lightgrey;
+}
+.bq{
+	background-color: grey;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
