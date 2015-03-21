@@ -40,10 +40,12 @@ TÀI LIỆU-BIÊN BẢN BÁO CÁO QUY TRÌNH LÀM VIỆC-TEST CASE: trong mục 
 CÔNG NGHỆ/NỀN TẢNG PHÁT TRIỂN: 
 	I - Client Side Scripting / Coding: HTML, CSS, Bootstrap.
 	II - Server Side Scripting/Coding: PHP
-	* System FrameWork: Codeigniter Framework
+	* System FrameWork: Codeigniter Framework 
 	
 CÁCH SỬ DỤNG: 
+	Các file code ở trong mục application/controller, application/model, application/view
 	cài đặt chương trình tạo máy chủ Web: vd XAMPP.
 	coppy file CNPM sau khi clone vào xampp\htdocs.
 	chạy XAMPP -> tạo 1 bảng csdl svcan trên http://localhost/phpmyadmin và import file csdl: svcan.sql vào
 	-> truy cập vào trang web qua địa chỉ: http://localhost/CNPM/
+	
