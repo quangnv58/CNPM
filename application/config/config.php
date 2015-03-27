@@ -14,6 +14,7 @@
 | path to your installation.
 |
 */
+$config['server_root'] = $_SERVER['DOCUMENT_ROOT']; 
 $config['base_url']	= 'http://localhost/CNPM/';
 
 /*
