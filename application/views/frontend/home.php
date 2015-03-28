@@ -10,6 +10,8 @@
   <link href=" <?php echo base_url();?> public/frontend/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <link href="public/frontend/css/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="public/frontend/css/styleq.css">
+
+  <link rel="shortcut icon" href="favicon.ico" />
   <title>Sinh viên cần</title>
 </head>
 
