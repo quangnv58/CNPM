@@ -33,6 +33,7 @@ class Hientin extends CI_Controller {
 			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
+		$this->data['id']=$id;
 		$this->data['post']=$data['post'];
 		$this->data['cat']='show';
 		$this->load->view('frontend/home',$this->data);	

@@ -7,6 +7,7 @@ class Nophoso extends CI_Controller {
         parent::__construct();
 		$this->load->model("frontend/mmenu");
 		$this->load->model("frontend/mpost");
+		$this->load->model("frontend/memail");
 		$this->data['menu']=$this->mmenu->menu_by(1,0);
 		$this->data['pages']='hoso';
 		$this->load->library("session");
@@ -17,6 +18,16 @@ class Nophoso extends CI_Controller {
 		$this->uid= $this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
+		//set up cấu hình email
+		$config = array(
+			'protocol' => 'smtp',
+			'smtp_host' => 'ssl://smtp.googlemail.com',
+			'smtp_port' => '465',
+			'smtp_user' => 'svc.111bit@gmail.com', // email cua m
+			'smtp_pass' => 'Sinhviencan'//Nhớ đánh đúng user và pass nhé
+        );
+        $this->load->library('email',$config);
+        $this->email->set_newline("\r\n");
  
     }
 	public function confirm($id){
@@ -37,6 +48,18 @@ class Nophoso extends CI_Controller {
 			$email = $row->email;
 		}
 		$this->data['email']=$email;
+		if(isset($_POST['confirm'])){
+			//luu thong tin sinh vien de gui mail
+			$data = array(
+				'name' => $_POST['name'], 
+				'numberphone' => $_POST['numberphone'], 
+				'email' => $_POST['email'], 
+				'university' => $_POST['university'], 
+				'birthday' => $_POST['birthday'],
+				'gender' => $_POST['gender']
+			);
+			$this->memail->sent($data,$email);
+		}
 		$this->load->view('frontend/home',$this->data);
 	}
 }
