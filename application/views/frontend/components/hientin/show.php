@@ -40,8 +40,9 @@
 			<p>
 				<?php echo isset($post['outdate'])?$post['outdate']:'';?>
 			</p>
-			<a href="#"></a>
-			<p> <img src="images/nopdon.png" /> Nộp hồ sơ</p>
+			<a href="<?php echo 'http://localhost/CNPM/nophoso/confirm/'.$id?>">
+            <p> <img src="images/nopdon.png" /> Nộp hồ sơ</p>
+            </a>
 		</div>
 	</div>
 	</form>
@@ -65,16 +66,18 @@
 		?>
 		</div>
 	</div>
-
-	<?php 
-		$this->session->userdata('logged_in');
-		$session_data = $this->session->userdata('logged_in');
-		$user= $session_data['user'];
-		if($user!=NULL){
-		$_SESSION['id']=$post['idpost'];
-		include("comment.php");
-		}
-	?>
-	<div class="fb-comments"  data-colorscheme="light"  data-numposts="5" data-width="600"></div>
-
+	<div class="old_comment">
+		<div class="container">
+		<?php 
+            $this->session->userdata('logged_in');
+            $session_data = $this->session->userdata('logged_in');
+            $user= $session_data['user'];
+            if($user!=NULL){
+            $_SESSION['id']=$post['idpost'];
+            include("comment.php");
+            }
+        ?>
+		<div class="fb-comments"  data-colorscheme="light"  data-numposts="5" data-width="600"></div>
+		</div>
+	</div>
 </div>
