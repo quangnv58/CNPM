@@ -49,3 +49,9 @@ CÁCH SỬ DỤNG:
 	chạy XAMPP -> tạo 1 bảng csdl svcan trên http://localhost/phpmyadmin và import file csdl: svcan.sql vào
 	-> truy cập vào trang web qua địa chỉ: http://localhost/CNPM/
 	
+	Video demo sprint thứ 2 https://www.youtube.com/watch?v=q9ZnsVj4dDg
+	Video demo sprint thứ 3 https://www.youtube.com/watch?v=Tk0NR_fs5gI&feature=youtu.be
+	
+
+	
+	
