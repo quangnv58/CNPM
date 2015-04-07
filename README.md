@@ -52,6 +52,22 @@ CÁCH SỬ DỤNG:
 	Video demo sprint thứ 2 https://www.youtube.com/watch?v=q9ZnsVj4dDg
 	Video demo sprint thứ 3 https://www.youtube.com/watch?v=Tk0NR_fs5gI&feature=youtu.be
 	
+	Phong cách lập trình<html>
+	<head>
+		<title> phong cach lap trinh </title>
+	</head>
+	
+	<body>
+		<br/>
+		<div>
+			<b> các doan code ben trong thut vao mot tab </b>
+			<?php	// ghi chu dau doan code php
+				echo "nhung cau lenh trong the thut vao 1 tab";
+				$a = 4 + 5; // dau toan tu va so cach nhau 1 dau cach
+			?>
+		</div>
+	</body>
+</html>
 
 	
 	
