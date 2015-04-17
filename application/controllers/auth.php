@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Auth extends CI_Controller{
+class Auth extends CI_Controller
+{
 	private $uid;
 	private $access_token;
 	public function __construct()
@@ -12,16 +13,19 @@ class Auth extends CI_Controller{
 			"appId"=>"1567383593519565",
 			"secret"=>"8e12a6ee40251675e9e965448edf76f1"
 		));
-		$this->uid= $this->facebook->getUser();
+		$this->uid=$this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
 		
 	}
-	public function index(){
+	public function index()
+	{
 		$this->load->view("auth",$this);
 	}
-	public function login(){
-		if($this->uid){
+	public function login()
+	{
+		if($this->uid)
+		{
 			try{
 				$me=$this->facebook->api("/me");
 				$this->session->set_userdata("facebook",$me['id']);
@@ -31,7 +35,8 @@ class Auth extends CI_Controller{
 				$this->uid=NULL;
 			}
 		}
-		else{
+		else
+		{
 			die("<script>top.location='".$this->facebook->getLoginUrl(array(
 				"scope"=>"email",
 				"redirect_url"=>site_url("auth")
@@ -39,7 +44,8 @@ class Auth extends CI_Controller{
 		}
 		redirect("");	
 	}
-	public function logout(){
+	public function logout()
+	{
 		//session_destroy();
 		$this->session->sess_destroy();
 		redirect("");

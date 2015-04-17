@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Trangchu extends CI_Controller {
+class Trangchu extends CI_Controller 
+{
 	private $uid;
 	private $access_token;
 	public function __construct()
@@ -19,8 +20,8 @@ class Trangchu extends CI_Controller {
 		$this->uid= $this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
-		$session_data = $this->session->userdata('logged_in');
-		$this->data['user'] = $session_data['user'];
+		$session_data=$this->session->userdata('logged_in');
+		$this->data['user']=$session_data['user'];
  
 	}
 	public function index()

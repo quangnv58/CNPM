@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Tinmoi extends CI_Controller {
+class Tinmoi extends CI_Controller 
+{
 	public function __construct()
     {
         // Call the Model constructor
@@ -15,7 +16,7 @@ class Tinmoi extends CI_Controller {
 			"appId"=>"1567383593519565",
 			"secret"=>"8e12a6ee40251675e9e965448edf76f1"
 		));
-		$this->uid= $this->facebook->getUser();
+		$this->uid=$this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
  

@@ -1,7 +1,8 @@
 
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Suatin extends CI_Controller {
+class Suatin extends CI_Controller 
+{
 	public function __construct()
     {
         // Call the Model constructor
@@ -17,14 +18,17 @@ class Suatin extends CI_Controller {
 		$this->load->database();
 		$this->load->view('frontend/home',$this->data);
 	}
-	public function edit($id){
+	public function edit($id)
+	{
 		$id=(int)$id;
 		$data['post']=$this->db->select('*')->from('post')->where(array('idpost' => $id))->get()->row_array();
-		if(!isset($data['post']) || count($data['post'])==0){
+		if(!isset($data['post']) || count($data['post'])==0)
+		{
 			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
-		if($this->input->post('edit')){
+		if($this->input->post('edit'))
+		{
 			$title=$this->input->post('title');
 			$recruitment=$this->input->post('recruitment');
 			$number=$this->input->post('number');
@@ -34,12 +38,12 @@ class Suatin extends CI_Controller {
 			$describer=$this->input->post('describer');                          
 			$data = array( 
 				'recruitment'=>$recruitment, 
-				'title' => $title, 
-				'number' => $number, 
-				'position' => $position, 
-				'postdate' => $postdate, 
-				'outdate' => $outdate,
-				'describer' => $describer
+				'title'=>$title, 
+				'number'=>$number, 
+				'position'=>$position, 
+				'postdate'=>$postdate, 
+				'outdate'=>$outdate,
+				'describer'=>$describer
 			); 
 			$this->db->where('idpost',$id)->update('post',$data);
 			header('Location: http://localhost/CNPM/tinmoi');
@@ -48,15 +52,18 @@ class Suatin extends CI_Controller {
 		$this->data['cat']='edit';
 		$this->load->view('frontend/home',$this->data);	
 	}
-	public function delete($id){
+	public function delete($id)
+	{
 		$id=(int)$id;
-		$data['post']=$this->db->select('*')->from('post')->where(array('idpost' => $id))->get()->row_array();
-		if(!isset($data['post']) || count($data['post'])==0){
+		$data['post']=$this->db->select('*')->from('post')->where(array('idpost'=>$id))->get()->row_array();
+		if(!isset($data['post']) || count($data['post'])==0)
+		{
 			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}
-		if($this->input->post('delete')){ 
-			$this->db->delete('post',array('idpost'=> $id));
+		if($this->input->post('delete'))
+		{ 
+			$this->db->delete('post',array('idpost'=>$id));
 			header('Location: http://localhost/CNPM/tinmoi');
 			die;
 		}

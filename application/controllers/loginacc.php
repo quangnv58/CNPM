@@ -1,8 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Loginacc extends CI_Controller {
-
-	function __construct(){
+class Loginacc extends CI_Controller 
+{
+	function __construct()
+	{
 		 parent::__construct();
 		$this->load->model("frontend/mmenu");
 		$this->load->model("frontend/mpost");
@@ -21,8 +22,8 @@ class Loginacc extends CI_Controller {
 		$this->form_validation->set_rules('user', 'Username', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
 	}
-
-	function index(){
+	function index()
+	{
 		$this->load->helper(array('form'));
 		$this->data['cat']='login_view';
 		$this->load->view('frontend/home',$this->data);

@@ -1,15 +1,15 @@
 
 <?php
-class Email extends CI_Controller{
-   
-    
-    function index(){
+class Email extends CI_Controller
+{  
+    function index()
+	{
          $config = array(
-                'protocol' => 'smtp',
-                'smtp_host' => 'ssl://smtp.googlemail.com',
-                'smtp_port' => '465',
-                'smtp_user' => 'manhtien12121995@gmail.com', // email cua m
-                'smtp_pass' => ''//Nhớ đánh đúng user và pass nhé
+			'protocol' => 'smtp',
+			'smtp_host' => 'ssl://smtp.googlemail.com',
+			'smtp_port' => '465',
+			'smtp_user' => 'manhtien12121995@gmail.com', // email cua m
+			'smtp_pass' => ''//Nhớ đánh đúng user và pass nhé
         );
         $this->load->library('email',$config);
         $this->email->set_newline("\r\n");
@@ -25,7 +25,7 @@ class Email extends CI_Controller{
         $this->email->attach($file);
         
         if($this->email->send()){
-        echo "Mail đã được gửi cho bạn";
+        	echo "Mail đã được gửi cho bạn";
         }
         else
         {
