@@ -67,7 +67,16 @@ CÁCH SỬ DỤNG:
 			?>
 		</div>
 	</body>
-</html>
+	</html>
+	
+	class nameclass {
+		function __construct()
+		{
+			//
+		}
+	}
 
+HƯỚNG DẪN CHẠY TESTUNIT:
+CHẠY LINK: http://localhost/CNPM/testingunit/testpost;
 	
 	
