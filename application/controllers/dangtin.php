@@ -31,10 +31,10 @@ class Dangtin extends CI_Controller
 		$this->session->userdata('logged_in');
 		$session_data = $this->session->userdata('logged_in');
 		$user=$session_data['user'];
-		$query=$this->db->get_where('user', array('user' => $user));
+		$query=$this->db->get_where('user', array('user'=>$user));
 		foreach($query->result() as $row)
 		{
-			$name = $row->name;
+			$name=$row->name;
 		}                         
 		$data = array( 
 			'recruitment'=>$name, 
