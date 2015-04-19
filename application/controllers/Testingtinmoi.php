@@ -19,7 +19,7 @@ class Testpost extends CI_Controller
 			'password'=>"123456"
 			);
 		$this->mpost->insert($data);
-		 $test=$query->result_array();
+		$test=$query->result_array();
 		$expected_result = $data;
 		$test_name = 'test signup';
 		$this->unit->run($test, $expected_result, $test_name);	
