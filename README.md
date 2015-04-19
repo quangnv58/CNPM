@@ -77,6 +77,6 @@ CÁCH SỬ DỤNG:
 	}
 
 HƯỚNG DẪN CHẠY TESTUNIT:
-CHẠY LINK: http://localhost/CNPM/testingunit/testpost;
+CHẠY LINK: http://localhost/CNPM/testingunit/name_file_test
 	
 	
