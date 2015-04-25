@@ -9,34 +9,34 @@ class Test_post extends CI_Controller
 	}
 	public function index()
 	{
-		$user="admin";
-		$name="quang";
+		$user = "admin";
+		$name = "quang";
 		$data = array(
-			'recruitment'=>$name, 
-			'title'=>"Tuyển nhân viên", 
-			'number'=>"10", 
-			'position'=>"Lập trình viên C", 
-			'postdate'=>"2014-02-03", 
-			'outdate'=>"2015-02-03",
-			'describer'=>"Làm việc part-time",
-			'status'=>'1',
-			'belong'=>$user 
+			'recruitment' => $name, 
+			'title'		  => "Tuyển nhân viên", 
+			'number'	  => "10", 
+			'position'	  => "Lập trình viên C", 
+			'postdate'	  => "2014-02-03", 
+			'outdate'	  => "2015-02-03",
+			'describer'	  => "Làm việc part-time",
+			'status'      => '1',
+			'belong'	  => $user 
 		);
 		$this->mpost->insert($data);
-		$query=$this->db->get_where('post', array('recruitment'=>$name,'title'=>"Tuyển nhân viên"));
-        $row=$query->row();
+		$query = $this->db->get_where('post', array('recruitment' => $name,'title' => "Tuyển nhân viên"));
+        $row = $query->row();
 		$data_result=array(
-			'recruitment'=>$row->recruitment, 
-			'title'=>$row->title,  
-			'number'=>$row->number,
-			'position'=>$row->position, 
-			'postdate'=>$row->postdate, 
-			'outdate'=>$row->outdate,
-			'describer'=>$row->describer,
-			'status'=>$row->status,
-			'belong'=>$row->belong
+			'recruitment' => $row->recruitment, 
+			'title'		  => $row->title,  
+			'number'	  => $row->number,
+			'position'	  => $row->position, 
+			'postdate' 	  => $row->postdate, 
+			'outdate'	  => $row->outdate,
+			'describer'	  => $row->describer,
+			'status'	  => $row->status,
+			'belong'	  => $row->belong
 		);
-		$test_name='test add data to database';
+		$test_name = 'test add data to database';
 		$this->unit->run($data_result, $data, $test_name);	
 		$this->load->view("test");
 	}

@@ -16,10 +16,10 @@ class Test_verifyLogin extends CI_Controller {
 	}
 	public function index()
 	{
-		$data=true;
-		$user=$this->input->post('user');
-		$data_result=$this->user->login($user, "123456");
-		$test_name='test function check_database';
+		$data = TRUE;
+		$user = $this->input->post('user');
+		$data_result = $this->user->login($user, "123456");
+		$test_name = 'test function check_database';
 		$this->unit->run($data_result, $data, $test_name);	
 		$this->load->view("test");
 	}

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dangtin extends CI_Controller 
+class Dang_tin extends CI_Controller 
 {
 	public function __construct()
     {
@@ -22,7 +22,7 @@ class Dangtin extends CI_Controller
     }
 	public function index()
 	{
-		$this->data['cat']='them';
+		$this->data['cat'] = 'them';
 		$this->load->database();
 		$this->load->view('frontend/home',$this->data);
 	}
@@ -34,18 +34,18 @@ class Dangtin extends CI_Controller
 		$query=$this->db->get_where('user', array('user'=>$user));
 		foreach($query->result() as $row)
 		{
-			$name=$row->name;
+			$name = $row->name;
 		}                         
 		$data = array( 
-			'recruitment'=>$name, 
-			'title'=>$_POST['title'], 
-			'number'=>$_POST['number'], 
-			'position'=>$_POST['position'], 
-			'postdate'=>$_POST['postdate'], 
-			'outdate'=>$_POST['outdate'],
-			'describer'=>$_POST['describer'],
-			'status'=>'1',
-			'belong'=>$user
+			'recruitment' => $name, 
+			'title' => $_POST['title'], 
+			'number' => $_POST['number'], 
+			'position' => $_POST['position'], 
+			'postdate' => $_POST['postdate'], 
+			'outdate' => $_POST['outdate'],
+			'describer' => $_POST['describer'],
+			'status' => '1',
+			'belong' => $user
 		); 
 		$this->mpost->insert($data); 
 		redirect(""); 
