@@ -11,11 +11,11 @@ class Test_tinMoi extends CI_Controller
 	public function index()
 	{
 		$data=array(
-			'user' => "admin",
+			'user' 	   => "admin",
 			'password' => "123456"
 			);
 		$data2=array(
-			'user' => "admin",
+			'user'     => "admin",
 			'password' => "123456"
 			);
 		$this->mpost->insert($data);

@@ -1,5 +1,6 @@
 <?php
-class Test_verifyLogin extends CI_Controller {
+class Test_verifyLogin extends CI_Controller 
+{
 	public function __construct()
 	{
 		parent::__construct();
@@ -8,8 +9,8 @@ class Test_verifyLogin extends CI_Controller {
 		$this->load->model("frontend/mmenu");
 		$this->load->library("session");
 		$this->load->library("facebook",array(
-			"appId"=>"1567383593519565",
-			"secret"=>"8e12a6ee40251675e9e965448edf76f1"
+			"appId" => "1567383593519565",
+			"secret" => "8e12a6ee40251675e9e965448edf76f1"
 		));
 		$this->access_token=$this->facebook->getAccessToken();
 		$this->load->library('form_validation');

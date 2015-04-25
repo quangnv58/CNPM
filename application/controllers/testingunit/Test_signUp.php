@@ -10,11 +10,11 @@ class Test_signUp extends CI_Controller
 	public function index()
 	{
 		$data = array (
-				'name' 	   => "Tran Manh Tien",
-				'user' 	   => "manhtien1212",
-				'password' => "12121995",
-				'email'    => "manhtien121219952gmail.com",
-				'field'    => "IT"
+			'name' 	   => "Tran Manh Tien",
+			'user' 	   => "manhtien1212",
+			'password' => "12121995",
+			'email'    => "manhtien121219952gmail.com",
+			'field'    => "IT"
 		);	
 		$this->mlogin->insert($data);
 		$query = $this->db->get_where('user', array('name' => "Tran Manh Tien"));
