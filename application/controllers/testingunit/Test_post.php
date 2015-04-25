@@ -1,5 +1,5 @@
 <?php
-class Testpost extends CI_Controller
+class Test_post extends CI_Controller
 {
 	public function __construct()
 	{
@@ -41,3 +41,5 @@ class Testpost extends CI_Controller
 		$this->load->view("test");
 	}
 }
+/* End of file test_post.php */
+/* Location: ./application/controllers/testingunit/test_post.php */

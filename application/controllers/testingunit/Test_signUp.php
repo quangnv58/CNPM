@@ -1,5 +1,5 @@
 <?php
-class testSignUp extends CI_Controller
+class Test_signUp extends CI_Controller
 {
 	public function __construct()
 	{
@@ -9,19 +9,6 @@ class testSignUp extends CI_Controller
 	}
 	public function index()
 	{
-		/*$user="admin";
-		$name="quang";
-		$data = array(
-			'recruitment'=>$name, 
-			'title'=>"Tuy?n nhân viên", 
-			'number'=>"10", 
-			'position'=>"L?p tr?nh viên C", 
-			'postdate'=>"2014-02-03", 
-			'outdate'=>"2015-02-03",
-			'describer'=>"Làm vi?c part-time",
-			'status'=>'1',
-			'belong'=>$user 
-		);*/
 		$data = array (
 				'name' => "Tran Manh Tien",
 				'user' => "manhtien1212",
@@ -44,3 +31,5 @@ class testSignUp extends CI_Controller
 		$this->load->view("test");
 	}
 }
+/* End of file test_sinUp.php */
+/* Location: ./application/controllers/testingunit/Test_signUp.php */
