@@ -18,7 +18,7 @@ class Dang_tin extends CI_Controller
 		$this->uid=$this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
- 
+ 		$this->load->helper('date');
     }
 	public function index()
 	{
@@ -35,13 +35,15 @@ class Dang_tin extends CI_Controller
 		foreach($query->result() as $row)
 		{
 			$name = $row->name;
-		}                         
+		}
+		$datestring = "%Y-%m-%d";
+		$time = time();                         
 		$data = array( 
 			'recruitment' => $name, 
 			'title' => $_POST['title'], 
 			'number' => $_POST['number'], 
 			'position' => $_POST['position'], 
-			'postdate' => $_POST['postdate'], 
+			'postdate' => mdate($datestring, $time), 
 			'outdate' => $_POST['outdate'],
 			'describer' => $_POST['describer'],
 			'status' => '1',
