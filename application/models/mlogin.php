@@ -1,17 +1,19 @@
 <?php
-
-class mlogin extends CI_Model{
+class Mlogin extends CI_Model{
 	
-
-	public function findAll(){
+	public function findAll()
+	{
 		return $this->db->get('svc_user')->result();
 	}
-	public function insert($tk = array()){
+	public function insert($tk = array())
+	{
 		$this->db->insert('svc_user',$tk);
 	}	
-	public function find($data){
+	public function find($data)
+	{
 		$this->db->where('name', $data['name']);
 		return $this->db->get('svc_user')->row();
 	}
 }
-	
+/* End of file */
+/* Location: ./application/models/Mlogin.php */

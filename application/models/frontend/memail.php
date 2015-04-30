@@ -1,6 +1,7 @@
 <?php
 class Memail extends CI_Model{
-	public function sent($data,$email){
+	public function sent($data,$email)
+	{
 		$this->email->from('svc.111bit@gmail.com', 'SVC'); // email ng gui
         $this->email->to($email);    // email ng nhan
         $this->email->subject('Thông tin sinh viên đăng ký ứng tuyển');
@@ -8,7 +9,7 @@ class Memail extends CI_Model{
         
         //Các dòng được thêm nè
         $path = $this->config->item('server_root');//Test đường dẫn thì echo nó ra,rùi   dùng die(); nếu hiện ra đường dẫn thì ok xóa bỏ nó
-       // $file = $path . '/ciexam/attachments/yourinfo.txt';
+        // $file = $path . '/ciexam/attachments/yourinfo.txt';
         //$this->email->attach($file);
         
         if($this->email->send())
@@ -22,4 +23,6 @@ class Memail extends CI_Model{
         }
 	}
 }
+/* End of file */
+/* Location: ./application/models/Memail.php */
 	
