@@ -1,22 +1,19 @@
 <?php
-
 class File extends CI_Controller{
-	public function __construct()
-	{
+	public function __construct(){
 		parent::__construct();
 		#Tải thư viện  và helper của Form trên CodeIgniter
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session'));
 	}
 	
-	public function index()
-	{
+	public function index(){
 		$this->load->view('file-template');
 	}
 	
 	public function upload()
 	{
-		$a_Data  = array();
+		$a_Data = array();
 		$b_Check = false;
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if($_FILES["file"]["name"]){
@@ -43,7 +40,7 @@ class File extends CI_Controller{
 					$this->session->set_userdata('album', $image_data);
 					redirect(base_url('file/show'));
 				} else {
-					$b_Check = FALSE;
+					$b_Check = false;
 				}
 			}
 		}
@@ -51,8 +48,7 @@ class File extends CI_Controller{
 		$this->load->view('file-template', $a_Data);
 	}
 	
-	public function checkImages()
-	{
+	public function checkImages(){
 		$a_Data = array();
 		$a_Album = $this->session->userdata('album');
 		if( is_array($a_Album) ){
