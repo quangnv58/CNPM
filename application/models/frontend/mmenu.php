@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Mmenu extends CI_Model{
-	public function menu_by($level,$parent_id){
+	public function menu_by($level,$parent_id)
+	{
 		$table=$this->db->dbprefix('menu');	
 		$this->db->where('level',$level);
 		$this->db->where('parent_id',$parent_id);
@@ -10,5 +11,6 @@ class Mmenu extends CI_Model{
 		return $query->result_array();
 	}
 }
-
+/* End of file */
+/* Location: ./application/models/mmenu.php */
 ?>
