@@ -1,19 +1,21 @@
 <?php
 class File extends CI_Controller{
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		#Tải thư viện  và helper của Form trên CodeIgniter
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session'));
 	}
 	
-	public function index(){
+	public function index()
+	{
 		$this->load->view('file-template');
 	}
 	
 	public function upload()
 	{
-		$a_Data = array();
+		$a_Data  = array();
 		$b_Check = false;
 		if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			if($_FILES["file"]["name"]){
@@ -60,3 +62,5 @@ class File extends CI_Controller{
 		$this->load->view('show-template', $a_Data);
 	}	
 }
+/* End of file File.php */
+/* Location: ./application/controllers/File.php */
