@@ -51,14 +51,18 @@
 		<div class="container">
 		<?php
 			$conn = new mysqli("localhost", "root","","svcan");
-			if ($conn->connect_error) {
+			if ($conn->connect_error)
+			{
 				die("Connection failed: " . $conn->connect_error);
 			}
 			$sql = " SELECT belongUser,content,belongPost FROM svc_comment";
 			$result = $conn->query($sql);
-			if($result->num_rows>0){
-				while($row=$result->fetch_assoc()){
-					if($row["belongPost"]==$post['idpost']){			
+			if($result->num_rows>0)
+			{
+				while($row=$result->fetch_assoc())
+				{
+					if($row["belongPost"]==$post['idpost'])
+					{			
 						echo '<div class="jumbotron"><span class="glyphicon glyphicon-user"></span>'.$row["belongUser"]." : ".$row["content"]."<br></div>";
 					}
 				}
@@ -71,8 +75,9 @@
 		<?php 
             $this->session->userdata('logged_in');
             $session_data = $this->session->userdata('logged_in');
-            $user= $session_data['user'];
-            if($user!=NULL){
+            $user = $session_data['user'];
+            if($user!=NULL)
+			{
             $_SESSION['id']=$post['idpost'];
             include("comment.php");
             }
@@ -81,3 +86,5 @@
 		</div>
 	</div>
 </div>
+<!--/*end of show.php*/-->
+<!--/*application\views\frontend\components\hientin\show.php*/-->	

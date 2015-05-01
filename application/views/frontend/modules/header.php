@@ -29,3 +29,5 @@ Password:
     </li>
 </ul>
 </div>
+<!--/*end of header.php*/-->
+<!--/*application\views\frontend\modules\header.php*/-->	

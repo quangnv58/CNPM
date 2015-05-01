@@ -61,3 +61,5 @@
 </div>
 </div>
 </div>
+<!--/*end of delete.php*/-->
+<!--/*application\views\frontend\components\suatin\delete.php*/-->	

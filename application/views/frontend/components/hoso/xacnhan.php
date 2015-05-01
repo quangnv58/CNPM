@@ -53,3 +53,5 @@
 </body>
 </html>
 <?php echo form_close(); ?>
+<!--/*end of xacnhan.php*/-->
+<!--/*application\views\frontend\components\hoso\xacnhan.php*/-->	

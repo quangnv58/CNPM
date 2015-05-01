@@ -21,9 +21,11 @@
 		
 	</form>
 	<?php
-		if($_SERVER["REQUEST_METHOD"] =="POST"){
+		if($_SERVER["REQUEST_METHOD"] =="POST")
+		{
 				$conn = new mysqli("localhost", "root","","svcan");
-					if ($conn->connect_error) {
+					if ($conn->connect_error) 
+					{
 			   			 die("Connection failed: " . $conn->connect_error);
 			   		}
 			   		$content=$_POST['cm'];
@@ -38,3 +40,5 @@
 	
 </body>
 </html>
+<!--/*end of comment.php*/-->
+<!--/*application\views\frontend\components\hientin\comment.php*/-->	

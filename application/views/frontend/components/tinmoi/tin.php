@@ -13,15 +13,16 @@
 				<th>Tiêu đề</th>
 				<th>Ngày đăng</th>
 				<?php
-				if($this->session->userdata('logged_in')!=NULL){
+				if($this->session->userdata('logged_in') != NULL)
+				{
 					echo'<th colspan="2">Quản lý</th>';
 				}
 				?>
     		
 			</tr>
 		<?php
-			foreach($post as $val){
-		
+			foreach($post as $val)
+			{
 		?>
 		<tr>
 			<td><a href="<?php echo "http://localhost/CNPM/hientin/show/".$val['idpost'] ?>">
@@ -32,7 +33,7 @@
 			<?php
 				$this->session->userdata('logged_in');
 				$session_data = $this->session->userdata('logged_in');
-				$user= $session_data['user'];
+				$user = $session_data['user'];
 				if($this->session->userdata('logged_in')!=NULL && $user==$val['belong']):
 			?>
 			<td width="44">
@@ -55,3 +56,5 @@
 		</table>
 	</div>
 </div>     
+<!--/*end of tin.php*/-->
+<!--/*application\views\frontend\components\tinmoi\tin.php*/-->	

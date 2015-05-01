@@ -1,7 +1,7 @@
 <?php 
 	$this->session->userdata('logged_in');
 	$session_data = $this->session->userdata('logged_in');
-	$user= $session_data['user'];
+	$user = $session_data['user'];
 ?>
 <script src="<?php echo $base_url;?>js/jquery.min.js" type="text/javascript"></script>
 <h1 class="banner">Studentneed</h1>
@@ -61,3 +61,5 @@
           </div>
      </div>
 </nav>
+<!--/*end of menu.php*/-->
+<!--/*application\views\frontend\modules\menu.php*/-->	

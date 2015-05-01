@@ -1,6 +1,4 @@
-
-    
-        <div id="myCarousel" class="carousel slide"  data-ride="carousel" class="slide">
+         <div id="myCarousel" class="carousel slide"  data-ride="carousel" class="slide">
           <!-- Indicators -->
                 <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -50,3 +48,5 @@
                   <span class="sr-only">Next</span>
                 </a>
         </div>
+<!--/*end of slide.php*/-->
+<!--/*application\views\frontend\modules\slide.php*/-->	

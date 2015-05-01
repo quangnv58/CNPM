@@ -1,4 +1,3 @@
-
 <div>
 </br></br>
     <div class="col-md-12 footer1">
@@ -17,5 +16,7 @@
     <div class="col-md-12 bq">
         <p>Copyright by 111B-IT</p>
     </div>
-    
+ 
 </div>
+<!--/*end of footer.php*/-->
+<!--/*application\views\frontend\modules\footer.php*/-->	

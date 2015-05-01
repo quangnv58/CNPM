@@ -48,3 +48,5 @@
 		</div>
 	</body>
 </html>
+<!--/*end of login_view.php*/-->
+<!--/*application\views\frontend\components\dangnhap\login_view.php*/-->	

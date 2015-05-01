@@ -38,24 +38,28 @@
     <button type="submit" class="btn btn-default">Save</button>
   </form>
   <?php
-	$test = false;
+	$test = FALSE;
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$user  = $_POST['user'];
 		$email = $_POST['email'];
 		$conn=new mysqli("localhost","root","","svcan");
-		  if($conn->connect_error){
+		  if($conn->connect_error)
+		  {
 			die("Connection failed: ". $conn->connect_error);
 		  }
 		$sql="SELECT user, email FROM svc_user";
 		$result=$conn->query($sql);//?
 		if($result->num_rows> 0){
-			while($row=$result->fetch_assoc()){
-				if( $user==$row["user"]){
+			while($row=$result->fetch_assoc())
+			{
+				if( $user==$row["user"])
+				{
 				  echo'<script>alert("User Name da co nguoi su dung");</script>';
 				  $test=false;
 				  break;		  
 				}
-				else if( $email == $row["email"] ){
+				else if( $email == $row["email"] )
+				{
 				  echo'<script>alert("Email da co nguoi su dung");</script>';
 				  $test=false;
 				  break;
@@ -65,13 +69,14 @@
 			}
 		}
 	}
-	if($test) {
+	if($test) 
+	{
 		$tk = array (
-				'name' => $this->input->post('name'),
-				'user' => $this->input->post('user'),
+				'name'     => $this->input->post('name'),
+				'user'     => $this->input->post('user'),
 				'password' => $this->input->post('password'),
-				'email' => $this->input->post('email'),
-				'field' => $this->input->post('field')
+				'email'    => $this->input->post('email'),
+				'field'    => $this->input->post('field')
 		);		
 		$this->mlogin->insert($tk);
 		echo'<script>alert("Đăng kí thành công");</script>';
@@ -83,3 +88,5 @@
 </body>
 </html>
 <?php echo form_close(); ?>
+<!--/*end of themtaikhoan.php*/-->
+<!--/*application\views\frontend\components\dangki\themtaikhoan.php*/-->	

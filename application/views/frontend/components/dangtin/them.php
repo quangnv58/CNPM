@@ -66,3 +66,5 @@
 <?php endif;?>
 </div>
 </div>
+<!--/*end of them.php*/-->
+<!--/*application\views\frontend\components\dangtin\them.php*/-->	

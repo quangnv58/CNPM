@@ -60,3 +60,5 @@
 </div>
 </form>
 </div>
+<!--/*end of edit.php*/-->
+<!--/*application\views\frontend\components\suatin\edit.php*/-->	

@@ -48,3 +48,5 @@
 			<?php endif;?>
 			            
 </div>
+<!--/*end of boxtin.php*/-->
+<!--/*application\views\frontend\modules\boxtin.php*/-->	
