@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<div id="fb-root"></div>
+	<div id = "fb-root"></div>
 	<script>
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -27,23 +27,31 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-<div class="container-fluid">
-	<div class="mainmenu">
+<div class = "container-fluid">
+	<div class = "mainmenu">
 		<?php $this->load->view('frontend/modules/menu.php');?>
 	</div>
-	<div class="container">
+	
+	<div class = "container">
 		<?php
-			if(isset($pages)&&isset($cat)){
+			if(isset($pages)&&isset($cat))
+			{
 				$this->load->view("frontend/components/".$pages."/".$cat);
 				$this->load->view('frontend/modules/footer.php');
 			}
-			else{ 
+			else
+			{ 
 				$this->load->view('frontend/modules/slide.php');
 				$this->load->view('frontend/modules/boxtin.php');
 				$this->load->view('frontend/modules/footer.php');
 			}
+		
 		?>    
 	</div>
 	</div><!--/*end container*/-->
+
 </body>
 </html>
+<!--/*end of home.php*/-->
+<!--/*application\views\frontend/home.php*/-->
+
