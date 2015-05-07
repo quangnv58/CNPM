@@ -1,8 +1,6 @@
-
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Hientin extends CI_Controller 
-{
+class Hientin extends CI_Controller {
 	public function __construct()
     {
         // Call the Model constructor
@@ -18,8 +16,6 @@ class Hientin extends CI_Controller
 		$this->uid = $this->facebook->getUser();
     	$this->access_token = $this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
- 
-		
     }
 	public function index()
 	{
@@ -30,7 +26,7 @@ class Hientin extends CI_Controller
 	public function show($id)
 	{
 		$id = int)$id;
-		$data['post']=$this->db->select('*')->from('post')->where(array('idpost'=>$id))->get()->row_array();
+		$data['post'] = $this->db->select('*')->from('post')->where(array('idpost'=>$id))->get()->row_array();
 		if(!isset($data['post']) || count($data['post']) == 0)
 		{
 			header('Location: http://localhost/CNPM/tinmoi');
