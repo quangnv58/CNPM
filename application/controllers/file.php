@@ -1,6 +1,7 @@
 <?php
 class File extends CI_Controller{
-	public function __construct(){
+	public function __construct()
+	{
 		parent::__construct();
 		#Tải thư viện  và helper của Form trên CodeIgniter
 		$this->load->helper(array('form', 'url'));
@@ -60,3 +61,5 @@ class File extends CI_Controller{
 		$this->load->view('show-template', $a_Data);
 	}	
 }
+/* End of file file.php */
+/* Location: ./application/controllers/file.php */

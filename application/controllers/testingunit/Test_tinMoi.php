@@ -1,7 +1,6 @@
 <?php
 
-class Test_tinMoi extends CI_Controller
-{
+class Test_tinMoi extends CI_Controller{
 	public function __construct()
 	{
 		parent::__construct();

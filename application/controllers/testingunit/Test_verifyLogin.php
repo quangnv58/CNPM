@@ -1,6 +1,5 @@
 <?php
-class Test_verifyLogin extends CI_Controller 
-{
+class Test_verifyLogin extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();

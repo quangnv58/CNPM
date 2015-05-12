@@ -1,11 +1,9 @@
-
 <?php
-class Email extends CI_Controller
-{  
+class Email extends CI_Controller{  
     function index()
 	{
          $config = array(
-			'protocol' => 'smtp',
+			'protocol'  => 'smtp',
 			'smtp_host' => 'ssl://smtp.googlemail.com',
 			'smtp_port' => '465',
 			'smtp_user' => 'manhtien12121995@gmail.com', // email cua m
@@ -33,4 +31,6 @@ class Email extends CI_Controller
         }
     }
 }
+/* End of file email.php */
+/* Location: ./application/controllers/email.php */
 ?>

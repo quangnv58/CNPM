@@ -1,21 +1,20 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dang_tin extends CI_Controller 
-{
+class dangtin extends CI_Controller {
 	public function __construct()
     {
         // Call the Model constructor
         parent::__construct();
 		$this->load->model("frontend/mmenu");
 		$this->load->model("frontend/mpost");
-		$this->data['menu']=$this->mmenu->menu_by(1,0);
-		$this->data['pages']='dangtin';
+		$this->data['menu'] = $this->mmenu->menu_by(1,0);
+		$this->data['pages'] = 'dangtin';
 		$this->load->library("session");
 		$this->load->library("facebook",array(
-			"appId"=>"1567383593519565",
-			"secret"=>"8e12a6ee40251675e9e965448edf76f1"
+			"appId"  => "1567383593519565",
+			"secret" => "8e12a6ee40251675e9e965448edf76f1"
 		));
-		$this->uid=$this->facebook->getUser();
+		$this->uid = $this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
  		$this->load->helper('date');
@@ -40,14 +39,14 @@ class Dang_tin extends CI_Controller
 		$time = time();                         
 		$data = array( 
 			'recruitment' => $name, 
-			'title' => $_POST['title'], 
-			'number' => $_POST['number'], 
-			'position' => $_POST['position'], 
-			'postdate' => mdate($datestring, $time), 
-			'outdate' => $_POST['outdate'],
-			'describer' => $_POST['describer'],
-			'status' => '1',
-			'belong' => $user
+			'title' 	  => $_POST['title'], 
+			'number' 	  => $_POST['number'], 
+			'position'	  => $_POST['position'], 
+			'postdate'    => mdate($datestring, $time), 
+			'outdate'     => $_POST['outdate'],
+			'describer'   => $_POST['describer'],
+			'status' 	  => '1',
+			'belong' 	  => $user
 		); 
 		$this->mpost->insert($data); 
 		redirect(""); 
@@ -60,3 +59,5 @@ class Dang_tin extends CI_Controller
         $this->load->view('frontend/components/dangtin/them',$data);
     }
 }
+/* End of file dangtin.php */
+/* Location: ./application/controllers/dangtin.php */

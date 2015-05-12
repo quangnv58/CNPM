@@ -9,13 +9,12 @@ class Auth extends CI_Controller {
         parent::__construct();
 		$this->load->library("session");
 		$this->load->library("facebook",array(
-			"appId"=>"1567383593519565",
-			"secret"=>"8e12a6ee40251675e9e965448edf76f1"
+			"appId"  => "1567383593519565",
+			"secret" => "8e12a6ee40251675e9e965448edf76f1"
 		));
-		$this->uid=$this->facebook->getUser();
+		$this->uid = $this->facebook->getUser();
     	$this->access_token=$this->facebook->getAccessToken();
 		$this->facebook->setAccessToken($this->access_token);
-		
 	}
 	public function index()
 	{
@@ -26,7 +25,7 @@ class Auth extends CI_Controller {
 		if($this->uid)
 		{
 			try{
-				$me=$this->facebook->api("/me");
+				$me = $this->facebook->api("/me");
 				$this->session->set_userdata("facebook",$me['id']);
 				$this->load->view("auth");
 			}
@@ -37,8 +36,8 @@ class Auth extends CI_Controller {
 		else
 		{
 			die("<script>top.location='".$this->facebook->getLoginUrl(array(
-				"scope"=>"email",
-				"redirect_url"=>site_url("auth")
+				"scope" => "email",
+				"redirect_url" => site_url("auth")
 			))."'</script>");	
 		}
 		redirect("");	
