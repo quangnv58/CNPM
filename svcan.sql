@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `svc_menu` (
 
 INSERT INTO `svc_menu` (`idmenu`, `name`, `sequence`, `status`, `link`, `level`, `parent_id`) VALUES
 (59, 'Tin Mới', 2, 1, 'tinmoi', 1, 0),
-(58, 'Đăng tin', 1, 1, 'Dang_tin', 1, 0);
+(58, 'Đăng tin', 1, 1, 'dangtin', 1, 0);
 
 -- --------------------------------------------------------
 
