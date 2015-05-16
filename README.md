@@ -1,4 +1,4 @@
-PROJECT OF 111B-IT TEAM
+﻿PROJECT OF 111B-IT TEAM
 
 CÁC THÀNH VIÊN: 
 	Đàm Duy Tiến
@@ -27,7 +27,7 @@ NGƯỜI DÙNG VÀ NHỮNG NGƯỜI LIÊN QUAN
 TÍNH NĂNG CƠ BẢN :
 -	Giao diện động
 -	Nhà tuyển dụng  có thể đăng tin ( thêm , sửa xóa ) tin mình đã đăng
--	Tạo tài khoản ( Singup)
+-	Tạo tài khoản ( SignUp)
 -	Đăng nhập / Đăng xuất ( Thường )
 -	Đăng nhập vào bằng facebook.
 -	Bình luận bài viết ( tin nhà tuyển dụng đăng )
