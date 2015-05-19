@@ -40,5 +40,5 @@ class Test_dangtin extends CI_Controller{
 		$this->load->view("test");
 	}
 }
-/* End of file test_post.php */
-/* Location: ./application/controllers/testingunit/test_post.php */
+/* End of file test_testdangtin.php */
+/* Location: ./application/controllers/testingunit/test_dangtin.php */
